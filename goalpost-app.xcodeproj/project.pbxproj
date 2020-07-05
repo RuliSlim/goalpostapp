@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		846E7DA724AF1ADD00FA27EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E7DA624AF1ADD00FA27EB /* AppDelegate.swift */; };
 		846E7DA924AF1ADD00FA27EB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E7DA824AF1ADD00FA27EB /* SceneDelegate.swift */; };
-		846E7DAB24AF1ADD00FA27EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E7DAA24AF1ADD00FA27EB /* ViewController.swift */; };
+		846E7DAB24AF1ADD00FA27EB /* GoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846E7DAA24AF1ADD00FA27EB /* GoalVC.swift */; };
 		846E7DAE24AF1ADD00FA27EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E7DAC24AF1ADD00FA27EB /* Main.storyboard */; };
 		846E7DB124AF1ADD00FA27EB /* goalpost_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 846E7DAF24AF1ADD00FA27EB /* goalpost_app.xcdatamodeld */; };
 		846E7DB324AF1AE000FA27EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846E7DB224AF1AE000FA27EB /* Assets.xcassets */; };
 		846E7DB624AF1AE000FA27EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846E7DB424AF1AE000FA27EB /* LaunchScreen.storyboard */; };
+		84C655E024B043DF00BEB0AF /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C655DF24B043DF00BEB0AF /* CreateGoalVC.swift */; };
+		84C655E224B064D300BEB0AF /* ViewControllExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C655E124B064D300BEB0AF /* ViewControllExt.swift */; };
+		84C655E424B0734000BEB0AF /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C655E324B0734000BEB0AF /* ViewExt.swift */; };
+		84CAAEDA24AF63A7004818E2 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CAAED924AF63A7004818E2 /* GoalType.swift */; };
+		84F4A84D24AF414600422B84 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4A84B24AF414600422B84 /* GoalCell.swift */; };
+		84F4A84E24AF414600422B84 /* GoalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F4A84C24AF414600422B84 /* GoalCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		846E7DA324AF1ADD00FA27EB /* goalpost-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalpost-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846E7DA624AF1ADD00FA27EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846E7DA824AF1ADD00FA27EB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		846E7DAA24AF1ADD00FA27EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		846E7DAA24AF1ADD00FA27EB /* GoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalVC.swift; sourceTree = "<group>"; };
 		846E7DAD24AF1ADD00FA27EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		846E7DB024AF1ADD00FA27EB /* goalpost_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goalpost_app.xcdatamodel; sourceTree = "<group>"; };
 		846E7DB224AF1AE000FA27EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846E7DB524AF1AE000FA27EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846E7DB724AF1AE000FA27EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C655DF24B043DF00BEB0AF /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
+		84C655E124B064D300BEB0AF /* ViewControllExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllExt.swift; sourceTree = "<group>"; };
+		84C655E324B0734000BEB0AF /* ViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
+		84CAAED924AF63A7004818E2 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		84F4A84B24AF414600422B84 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		84F4A84C24AF414600422B84 /* GoalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GoalCell.xib; path = ../View/GoalCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844203CB24AF2DBD005FE440 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				846E7DAC24AF1ADD00FA27EB /* Main.storyboard */,
+				846E7DB424AF1AE000FA27EB /* LaunchScreen.storyboard */,
+				84F4A84C24AF414600422B84 /* GoalCell.xib */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
 		846E7D9A24AF1ADD00FA27EB = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +80,60 @@
 		846E7DA524AF1ADD00FA27EB /* goalpost-app */ = {
 			isa = PBXGroup;
 			children = (
-				846E7DA624AF1ADD00FA27EB /* AppDelegate.swift */,
-				846E7DA824AF1ADD00FA27EB /* SceneDelegate.swift */,
-				846E7DAA24AF1ADD00FA27EB /* ViewController.swift */,
-				846E7DAC24AF1ADD00FA27EB /* Main.storyboard */,
+				844203CB24AF2DBD005FE440 /* Board */,
+				846E7DC224AF1D6A00FA27EB /* Base */,
+				846E7DC124AF1B7800FA27EB /* Extensions */,
+				846E7DC024AF1B6B00FA27EB /* Enum */,
+				846E7DBE24AF1B4E00FA27EB /* View */,
+				846E7DBD24AF1B4300FA27EB /* Controller */,
 				846E7DB224AF1AE000FA27EB /* Assets.xcassets */,
-				846E7DB424AF1AE000FA27EB /* LaunchScreen.storyboard */,
 				846E7DB724AF1AE000FA27EB /* Info.plist */,
 				846E7DAF24AF1ADD00FA27EB /* goalpost_app.xcdatamodeld */,
 			);
 			path = "goalpost-app";
+			sourceTree = "<group>";
+		};
+		846E7DBD24AF1B4300FA27EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846E7DAA24AF1ADD00FA27EB /* GoalVC.swift */,
+				84C655DF24B043DF00BEB0AF /* CreateGoalVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		846E7DBE24AF1B4E00FA27EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84F4A84B24AF414600422B84 /* GoalCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846E7DC024AF1B6B00FA27EB /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				84CAAED924AF63A7004818E2 /* GoalType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		846E7DC124AF1B7800FA27EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84C655E124B064D300BEB0AF /* ViewControllExt.swift */,
+				84C655E324B0734000BEB0AF /* ViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		846E7DC224AF1D6A00FA27EB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				846E7DA624AF1ADD00FA27EB /* AppDelegate.swift */,
+				846E7DA824AF1ADD00FA27EB /* SceneDelegate.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +197,7 @@
 				846E7DB624AF1AE000FA27EB /* LaunchScreen.storyboard in Resources */,
 				846E7DB324AF1AE000FA27EB /* Assets.xcassets in Resources */,
 				846E7DAE24AF1ADD00FA27EB /* Main.storyboard in Resources */,
+				84F4A84E24AF414600422B84 /* GoalCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +208,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				846E7DAB24AF1ADD00FA27EB /* ViewController.swift in Sources */,
+				846E7DAB24AF1ADD00FA27EB /* GoalVC.swift in Sources */,
+				84F4A84D24AF414600422B84 /* GoalCell.swift in Sources */,
+				84CAAEDA24AF63A7004818E2 /* GoalType.swift in Sources */,
 				846E7DA724AF1ADD00FA27EB /* AppDelegate.swift in Sources */,
+				84C655E024B043DF00BEB0AF /* CreateGoalVC.swift in Sources */,
+				84C655E224B064D300BEB0AF /* ViewControllExt.swift in Sources */,
 				846E7DB124AF1ADD00FA27EB /* goalpost_app.xcdatamodeld in Sources */,
+				84C655E424B0734000BEB0AF /* ViewExt.swift in Sources */,
 				846E7DA924AF1ADD00FA27EB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
