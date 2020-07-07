@@ -32,12 +32,10 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func backButton(_ sender: UIButton) {
-        print("masuk")
         goBack()
     }
     
     @IBAction func toTargetGoal(_ sender: UIButton) {
-        print("ko ga masuk sih?")
         guard let goalDesc = inputGoal.text, goalDesc != "What's your goal?" else { return }
         guard let goalType = self.goalType else { return }
         guard let targetGoalVC = storyboard?.instantiateViewController(withIdentifier: "TargetGoalVC") as? TargetGoalVC else { return }

@@ -66,5 +66,4 @@ class TargetGoalVC: UIViewController {
             completion(false)
         }
     }
-
 }

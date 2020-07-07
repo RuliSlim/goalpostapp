@@ -76,16 +76,57 @@
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qc0-b1-68L" userLabel="UndoMessage">
+                                <rect key="frame" x="0.0" y="600.5" width="375" height="66.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal removed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xo3-uZ-4bV">
+                                        <rect key="frame" x="20" y="12.5" width="191.5" height="41"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9Z-mg-tGG">
+                                        <rect key="frame" x="274" y="9.5" width="74" height="47"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                        <state key="normal" title="Undo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoGoalButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TNz-ij-gsY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dO0-om-kVX">
+                                        <rect key="frame" x="353" y="12.5" width="17" height="41"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dO0-om-kVX" firstAttribute="leading" secondItem="B9Z-mg-tGG" secondAttribute="trailing" constant="5" id="6Y1-q7-vDd"/>
+                                    <constraint firstAttribute="trailing" secondItem="dO0-om-kVX" secondAttribute="trailing" constant="5" id="aQJ-dk-f90"/>
+                                    <constraint firstItem="B9Z-mg-tGG" firstAttribute="leading" secondItem="Xo3-uZ-4bV" secondAttribute="trailing" constant="62.5" id="gul-Vh-35q"/>
+                                    <constraint firstItem="Xo3-uZ-4bV" firstAttribute="centerY" secondItem="qc0-b1-68L" secondAttribute="centerY" id="hHT-7h-svd"/>
+                                    <constraint firstItem="B9Z-mg-tGG" firstAttribute="centerY" secondItem="qc0-b1-68L" secondAttribute="centerY" id="n8K-xA-KVA"/>
+                                    <constraint firstItem="dO0-om-kVX" firstAttribute="centerY" secondItem="qc0-b1-68L" secondAttribute="centerY" id="noN-XP-5a7"/>
+                                    <constraint firstItem="Xo3-uZ-4bV" firstAttribute="leading" secondItem="qc0-b1-68L" secondAttribute="leading" constant="20" id="pEG-oW-IBy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="MoD-5N-ltu" firstAttribute="top" secondItem="hsC-fR-CCv" secondAttribute="bottom" constant="100" id="4y7-8H-8eW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hsC-fR-CCv" secondAttribute="trailing" id="CYs-eI-Uw7"/>
                             <constraint firstItem="hsC-fR-CCv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.15" id="JRZ-2G-Kde"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qc0-b1-68L" secondAttribute="trailing" id="Oh4-Zk-YFu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MoD-5N-ltu" secondAttribute="trailing" id="PUg-bA-OQV"/>
                             <constraint firstItem="hsC-fR-CCv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QTa-l4-BOz"/>
                             <constraint firstItem="hsC-fR-CCv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XQy-97-bkK"/>
+                            <constraint firstItem="qc0-b1-68L" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="bhG-jL-Um2"/>
+                            <constraint firstAttribute="bottom" secondItem="qc0-b1-68L" secondAttribute="bottom" id="dbg-xD-Imc"/>
                             <constraint firstItem="Se3-S7-50W" firstAttribute="top" secondItem="hsC-fR-CCv" secondAttribute="bottom" id="ikN-Va-Esv"/>
+                            <constraint firstItem="qc0-b1-68L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l0Y-4a-7uJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Se3-S7-50W" secondAttribute="trailing" id="qbO-CT-Fav"/>
                             <constraint firstItem="Se3-S7-50W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rxL-K4-jWR"/>
                             <constraint firstAttribute="bottom" secondItem="Se3-S7-50W" secondAttribute="bottom" id="smT-ZI-4tt"/>
@@ -94,13 +135,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="countLabel" destination="dO0-om-kVX" id="pLx-nk-8RG"/>
                         <outlet property="tableView" destination="Se3-S7-50W" id="Ba8-20-Ffa"/>
+                        <outlet property="undoMessage" destination="qc0-b1-68L" id="0zh-85-5G4"/>
                         <outlet property="welcomeMessage" destination="MoD-5N-ltu" id="DYa-Pu-3JV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+            <point key="canvasLocation" x="136.80000000000001" y="129.08545727136433"/>
         </scene>
         <!--Create GoalVC-->
         <scene sceneID="AFX-tu-1ID">
