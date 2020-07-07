@@ -8,34 +8,42 @@
 
 import UIKit
 
-class CreateGoalVC: UIViewController {
+class CreateGoalVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var inputGoal: UITextView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var shortTerm: UIButton!
     @IBOutlet weak var longTerm: UIButton!
     @IBOutlet weak var typeButtons: UIStackView!
+    @IBOutlet weak var container: UIView!
     
     private(set) public var goalType: GoalType!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // this simple method for attach button to keyboard. but it will diasppear when theres no keyboard
+        inputGoal.delegate = self
+        /* this simple method for attach button to keyboard. but it will diasppear when theres no keyboard
         // inputGoal.inputAccessoryView = nextButton
-        view.bindToKeyboard()
+        */
         nextButton.bindToKeyboard()
-        typeButtons.bindToKeyboard()
         
         // simple method choose beetween 2 buttons
-        shortTerm.addTarget(self, action: #selector(choosedType(_:)), for: .touchDown)
-        longTerm.addTarget(self, action: #selector(choosedType(_:)), for: .touchDown)
+        shortTerm.addTarget(self, action: #selector(choosedType(_:)), for: .touchUpInside)
+        longTerm.addTarget(self, action: #selector(choosedType(_:)), for: .touchUpInside)
     }
     
     @IBAction func backButton(_ sender: UIButton) {
-        //        goBack()
+        print("masuk")
+        goBack()
+    }
+    
+    @IBAction func toTargetGoal(_ sender: UIButton) {
+        print("ko ga masuk sih?")
+        guard let goalDesc = inputGoal.text, goalDesc != "What's your goal?" else { return }
+        guard let goalType = self.goalType else { return }
+        guard let targetGoalVC = storyboard?.instantiateViewController(withIdentifier: "TargetGoalVC") as? TargetGoalVC else { return }
         
-        // just for testing keyboard
-        inputGoal.resignFirstResponder()
+        targetGoalVC.setGoal(goalDesc: goalDesc, goalType: goalType)
+        presentingViewController?.presentSecondary(targetGoalVC)
     }
     
     @objc private func keyboardWillShow(_ sender: Any) {
@@ -50,9 +58,16 @@ class CreateGoalVC: UIViewController {
         case shortTerm:
             longTerm.backgroundColor = tempColor
             longTerm.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+            goalType = .shortTerm
         default:
             shortTerm.backgroundColor = tempColor
             shortTerm.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
+            goalType = .longTerm
         }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+        textView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
 }

@@ -7,19 +7,37 @@
 //
 
 import UIKit
+import CoreData
+
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
 class GoalVC: UIViewController {
     @IBOutlet weak var welcomeMessage: UIStackView!
     @IBOutlet weak var tableView: UITableView!
     
-    var goals: [String] = ["satu", "dua", "tiga","satu", "dua", "tiga","satu", "dua", "tiga","satu", "dua", "tiga"]
+    var goals: [Goal] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         setUpTable()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.fetchData { (completed) in
+            if completed {
+                if goals.count > 0 {
+                    tableView.isHidden = false
+                    welcomeMessage.isHidden = true
+                } else {
+                    tableView.isHidden = true
+                    welcomeMessage.isHidden = false
+                }
+            }
+        }
+        tableView.reloadData()
+    }
+    
     @IBAction func createGoal(_ sender: UIButton) {
         welcomeMessage.isHidden = true
         guard let createGoalVC = storyboard?.instantiateViewController(withIdentifier: "CreateGoalVC") else { return }
@@ -47,8 +65,23 @@ extension GoalVC: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "goalCell") as? GoalCell else {
             return GoalCell()
         }
-        
-        cell.configureCell(goalDescription: "Ini nati bakal jadi deskripsi", goalType: .longTerm, goalTarget: 3, goalProgress: 1)
+        let goal = goals[indexPath.row]
+        cell.configureCell(goal: goal)
         return cell
+    }
+}
+
+extension GoalVC {
+    func fetchData(completion: (_ complete: Bool) -> Void) {
+        guard let manageContext = appDelegate?.persistentContainer.viewContext else { return }
+        let fetchRequest = NSFetchRequest<Goal>(entityName: "Goal")
+        
+        do {
+            goals = try manageContext.fetch(fetchRequest)
+            completion(true)
+        } catch {
+            debugPrint(error.localizedDescription)
+            completion(false)
+        }
     }
 }

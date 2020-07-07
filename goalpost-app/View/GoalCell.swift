@@ -25,9 +25,9 @@ class GoalCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(goalDescription: String, goalType: GoalType, goalTarget: Int32, goalProgress: Int32) {
-        self.goalDescription.text = goalDescription
-        self.goalType.text = goalType.rawValue
-        self.goalProgress.text = String(goalProgress)
+    func configureCell(goal: Goal) {
+        self.goalDescription.text = goal.goalDescription
+        self.goalType.text = goal.goalType
+        self.goalProgress.text = String(goal.goalProgress)
     }
 }

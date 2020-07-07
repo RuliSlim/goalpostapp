@@ -19,6 +19,20 @@ extension UIViewController {
         present(viewControllerTarget, animated: false, completion: nil)
     }
     
+    func presentSecondary(_ viewControllertarget: UIViewController) {
+        let transition = CATransition()
+        transition.type = .fade
+        transition.subtype = .fromBottom
+        transition.duration = 0.5
+        
+        guard let currentPresentedVC = presentedViewController else { return }
+        
+        currentPresentedVC.dismiss(animated: false) {
+            self.view.window?.layer.add(transition, forKey: kCATransition)
+            self.present(viewControllertarget, animated: false, completion: nil)
+        }
+    }
+    
     func goBack() {
         let transition = CATransition()
         transition.type = .fade
